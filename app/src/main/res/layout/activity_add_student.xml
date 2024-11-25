@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="THÊM SINH VIÊN MỚI"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Input for "Họ tên" -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_hoten"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Họ tên"
+        app:boxStrokeColor="@color/teal_200"
+        app:boxStrokeWidthFocused="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_hoten"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            tools:text="Nguyễn Văn A" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Input for "MSSV" -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_mssv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="MSSV"
+        app:boxStrokeColor="@color/teal_200"
+        app:boxStrokeWidthFocused="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_hoten">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_mssv"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:inputType="number"
+            android:maxLines="1"
+            tools:text="2022012345" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Submit button -->
+    <Button
+        android:id="@+id/button_submit_add_student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Lưu thông tin"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_mssv" />
+
+    <!-- Cancel button -->
+    <Button
+        android:id="@+id/button_cancle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Huỷ"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/button_submit_add_student"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_mssv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
